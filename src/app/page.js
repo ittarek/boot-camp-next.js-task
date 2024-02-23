@@ -10,7 +10,7 @@ export default function Home() {
       <div className="banner-content">
         <h2>Hello</h2>
         <p>
-          I'm Gio, a talented frontend developer that loves creating immersive
+          I,m Gio, a talented frontend developer that loves creating immersive
           web experiences.
         </p>
       </div>
@@ -40,8 +40,7 @@ export default function Home() {
         </h1>
         <p className="w-3/4 text-white">
           Next.js is a popular open-source React framework that is used to build
-          modern web applications. It was developed by Vercel (formerly known as
-          Zeit) and has gained significant traction in the web development
+          modern web applications. It was developed by Vercel  and has gained significant traction in the web development
           community due to its efficiency, ease of use, and robust features.
         </p>
       </div>
