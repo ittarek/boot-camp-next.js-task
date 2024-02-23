@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import NavLinks from "./NavLinks";
 import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
-
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
@@ -42,12 +42,14 @@ const navData = beforeLoginNavData;
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <NewspaperIcon
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            />
             <Typography
               variant="h6"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -58,7 +60,7 @@ const navData = beforeLoginNavData;
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Pro News
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
