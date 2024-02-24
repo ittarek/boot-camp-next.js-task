@@ -38,7 +38,7 @@ const NavBar = () => {
   };
 const navData = beforeLoginNavData;
   return (
-    <div>
+
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -171,7 +171,7 @@ const navData = beforeLoginNavData;
           </Toolbar>
         </Container>
       </AppBar>
-    </div>
+
   );
 }
 export default NavBar;
