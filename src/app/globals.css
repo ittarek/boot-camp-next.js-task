@@ -29,10 +29,7 @@
    
 }
 
-.banner>img {
-    width: 60vw;
-    transition: 0.1s linear;
-}
+
 
 .banner h2 {
     font-weight: 500;
@@ -61,7 +58,7 @@
     }
 
     .banner>img {
-        width: 10vw;
+        width: 400px;
         left: 100px;
     }
 }

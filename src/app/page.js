@@ -16,9 +16,12 @@ export default function Home() {
     <main>
       <section className="banner ">
         <Image
-          width={100}
-          height={100}
-          src="https://avatars.githubusercontent.com/u/7092023?v=4"
+          className="w-[400px]"
+          width={500}
+          height={500}
+          src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+           blurDataURL="data:..." 
+           placeholder="blur"
           alt="Banner"
         />
         <div className="banner-content">
@@ -80,25 +83,32 @@ export default function Home() {
           </p>
         </div>
       </Container>
- <Container>   
-    <section className="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 ">
-        <div className=" grid-cols-3 ">
-          <LeftSide></LeftSide>
-        </div>
-        <div className=" grid-cols-6">
-          <MainSide></MainSide>
-        </div>
-        <div className=" grid-cols-3">
-          <RightSide></RightSide>
-        </div>
-      </section></Container>
+      <Container>
+        <section className="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+          <div className=" grid-cols-3 ">
+            <LeftSide></LeftSide>
+          </div>
+          <div className=" grid-cols-6">
+            <MainSide></MainSide>
+          </div>
+          <div className=" grid-cols-3">
+            <RightSide></RightSide>
+          </div>
+        </section>
+      </Container>
 
-   <Container>   <div className="my-11">
-        <LatestNews></LatestNews>
-      </div></Container>
-   <Container>   <div>
-        <Slider />
-      </div></Container>
+      <Container>
+        {" "}
+        <div className="my-11">
+          <LatestNews></LatestNews>
+        </div>
+      </Container>
+      <Container>
+        {" "}
+        <div>
+          <Slider />
+        </div>
+      </Container>
       <Container>
         {" "}
         <SlideNews></SlideNews>
