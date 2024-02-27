@@ -6,7 +6,8 @@ import MainSide from "./components/topStories/MainSide";
 import RightSide from "./components/topStories/RightSide";
 import Slider from "./gallary/Slider";
 import LatestNews from "./latastNews/LatastNews";
-import SlideNews from "./components/SlideNews/SlideNews";
+import SlideNews from "./components/slideNews/SlideNews";
+// import SlideNews from "./components/SlideNews/SlideNews";
 
 // import LatestNews from './path-to-LatestNews-component/LatestNews';
 

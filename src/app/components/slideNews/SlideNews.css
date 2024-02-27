@@ -1,487 +1,424 @@
-
-
 .main-wrapper {
-	/* max-width: 1662px; */
-	margin: 0 auto;
-
+  margin: 0 auto;
 }
 
-/*-------------------------------------------------------
--------------------------------------------------------
--------------------------------------------------------*/
-/* SLIDE LAYOUT
-/*-------------------------------------------------------
--------------------------------------------------------
--------------------------------------------------------*/
 .sl-wrapper {
-	position: relative;
+  position: relative;
 }
+
 .sl-nav {
-	position: relative;
-	width: 100px;
-	height: 60px;
+  position: relative;
+  width: 100px;
+  height: 60px;
 }
+
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev,
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-	background-image: url("https: //johnhunterhomebuilders.com/wp-content/uploads/2018/08/Headshot.png");
-}
-.swiper-button-next,
-.swiper-button-prev {
-	width: 35px;
+  background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2018/08/Headshot.png");
 }
 
-/*-------------------------------------------------------*/
-/* Card Bkg Img
-/*-------------------------------------------------------*/
+.swiper-button-next,
+.swiper-button-prev {
+  width: 35px;
+}
 
 .sl-bkg-img,
 .sl-gradient {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
+
 .sl-img-1 {
-	background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2018/08/Headshot.png");
+  background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2018/08/Headshot.png");
 }
+
 .sl-img-2 {
-	background-image: url("https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/317844508_516205937191713_8988161731860358304_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yOKLcnw5hVoAX81HXDC&_nc_oc=AQlIGwkEOZ_LforoGHznrWrgIokL1vCgeOb3lx_6AxbLXiED0NlGbDqyvkQiW7J0223eEEnh9_fswyKMd1LAMLnE&_nc_ht=scontent-dfw5-2.xx&oh=00_AfDYkuSxz8S8ZtPPSCeK-gDcxPiv_B3K3rZwDc3OwNjamA&oe=65B078E7");
+  background-image: url("https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/317844508_516205937191713_8988161731860358304_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yOKLcnw5hVoAX81HXDC&_nc_oc=AQlIGwkEOZ_LforoGHznrWrgIokL1vCgeOb3lx_6AxbLXiED0NlGbDqyvkQiW7J0223eEEnh9_fswyKMd1LAMLnE&_nc_ht=scontent-dfw5-2.xx&oh=00_AfDYkuSxz8S8ZtPPSCeK-gDcxPiv_B3K3rZwDc3OwNjamA&oe=65B078E7");
 }
+
 .sl-img-3 {
-	background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2021/03/FalonCarpenter-3.jpg");
+  background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2021/03/FalonCarpenter-3.jpg");
 }
+
 .sl-gradient {
-	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/gradient.png");
-	z-index: 1;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/gradient.png");
+  z-index: 1;
 }
-/*-------------------------------------------------------*/
-/* Card Content
-/*-------------------------------------------------------*/
 
 .sl--content-container {
-	position: absolute;
-	background-color: #ffffff;
+  position: absolute;
+  background-color: #ffffff;
 }
+
 .sl--content-container h2 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
+
 .sl--sub-text {
-	font-weight: 300;
+  font-weight: 300;
 }
+
 .content-reveal-btn {
-	background-color: #04b7ac;
+  background-color: #04b7ac;
 }
+
 .sl--show-card-info,
 .sl--close-card-info {
-	fill: #ffffff;
+  fill: #ffffff;
 }
+
 .sl--show-card-info {
-	transform: scale(0.6, 0.6);
-	-webkit-transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-	transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(0.6, 0.6);
+  transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 .sl--close-card-info {
-	-ms-transform: rotate(45deg) scale(0.6, 0.6);
-	-webkit-transform: rotate(45deg) scale(0.6, 0.6);
-	transform: rotate(45deg) scale(0.6, 0.6);
-	-webkit-transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-	transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: rotate(45deg) scale(0.6, 0.6);
+  transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-/*--------------------------
-
-     Media Queries 
-
---------------------------*/
-/*    Mobile    */
 
 @media only screen and (min-width: 320px) {
-	/* 320px */
+  .sl-header-wrapper {
+    padding: 0 18px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* SL Header: 320
-	/*-------------------------------------------------------*/
-	.sl-header-wrapper {
-		padding: 0 18px;
-	}
-	.sl-header-wrapper h3 {
-		font-size: 50px;
-		font-weight: 900;
-		line-height: 80%;
-		letter-spacing: -1.4px;
-		margin: 10px 0;
-	}
-	.sl-header-wrapper h4 {
-		font-weight: 500;
-		text-transform: uppercase;
-		margin: 0;
-		line-height: 100%;
-		letter-spacing: -1.4px;
-		word-spacing: 2.4px;
-	}
-	.sl-header-wrapper p {
-		font-weight: 300;
-	}
+  .sl-header-wrapper h3 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 80%;
+    letter-spacing: -1.4px;
+    margin: 10px 0;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Prev/Next Slide Cover: 320
-	/*-------------------------------------------------------*/
-	.sl-nav {
-		display: none;
-	}
-	.swiper-slide-prev .slide-cover,
-	.swiper-slide-next .slide-cover,
-	.slide-cover {
-		background-color: #ffffff;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		z-index: 2;
-		opacity: 0.75;
-		-webkit-transition: opacity 300ms;
-		transition: opacity 300ms;
-		visibility: visible;
-	}
-	.swiper-slide-active .slide-cover {
-		position: absolute;
-		opacity: 0;
-		-webkit-transition: visibility 0s 0.5s, opacity 300ms;
-		transition: visibility 0s 0.5s, opacity 300ms;
-		height: 100%;
-		width: 100%;
-		background-color: #ffffff;
-		z-index: 2;
-		visibility: hidden;
-	}
+  .sl-header-wrapper h4 {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 100%;
+    letter-spacing: -1.4px;
+    word-spacing: 2.4px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Swiper: 320
-	/*-------------------------------------------------------*/
+  .sl-header-wrapper p {
+    font-weight: 300;
+  }
 
-	.swiper-container {
-		width: 95%;
-		height: 100%;
-	}
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: none;
-	}
-	/*-------------------------------------------------------*/
-	/* Card: 320
-	/*-------------------------------------------------------*/
+  .sl-nav {
+    display: none;
+  }
 
-	.sl-card-wrapper {
-		position: relative;
-		height: 540px;
-		overflow: hidden;
-	}
-	/*-------------------------------------------------------*/
-	/* Card Bkg Img: 320
-	/*-------------------------------------------------------*/
+  .swiper-slide-prev .slide-cover,
+  .swiper-slide-next .slide-cover,
+  .slide-cover {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0.75;
+    transition: opacity 300ms;
+    visibility: visible;
+  }
 
-	.sl-gradient {
-		background-position: center 210px;
-	}
-	.sl-bkg-img {
-		background-size: cover;
-		background-position: center top;
-	}
-	/*-------------------------------------------------------*/
-	/* Card Content: 320
-	/*-------------------------------------------------------*/
+  .swiper-slide-active .slide-cover {
+    position: absolute;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 300ms;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 2;
+    visibility: hidden;
+  }
 
-	.sl--content-wrapper {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 50%;
-		transform: translate(-50%, 0);
-		-webkit-transition: width 250ms, height 250ms;
-		transition: width 250ms, height 250ms;
-		overflow: hidden;
-	}
-	.sl--content-wrapper-inactive {
-		width: 101%;
-		height: 541px;
-	}
-	.sl--content-wrapper-active {
-		width: 101%;
-		height: 100%;
-	}
-	.sl--content-container {
-		width: 100%;
-		height: auto;
-		padding-left: 16px;
-		padding-right: 16px;
-		z-index: 1;
-	}
-	.sl--card-hide {
-		transform: translate(0, 410px);
-		-webkit-transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
-			width 250ms;
-		transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
-			width 250ms;
-		height: 568px;
-	}
-	.sl--card-reveal {
-		transform: translate(0, 0);
-		-webkit-transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
-			width 250ms;
-		transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
-			width 250ms;
-		height: 100%;
-		width: 100%;
-		overflow: auto;
-		/*padding: 100px 0px;*/
-		padding-top: 20px;
-		padding-bottom: 100px;
-	}
-	.sl--content-container h2 {
-		font-size: 30px;
-		word-spacing: 2px;
-		letter-spacing: -1.4px;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.sl--sub-text {
-		margin-bottom: 0;
-		-webkit-transition: margin 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-		transition: margin 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-	}
-	.sl--card-reveal .sl--sub-text {
-		margin-top: 12%;
-	}
-	.sl--content-container .sl--card-content {
-		font-weight: 300;
-		margin-top: 15px;
-		overflow-y: auto;
-	}
-	.sl--link {
-		color: #04b7ac;
-		margin-bottom: 15px;
-	}
-	.sl--card-nav-container {
-		position: absolute;
-		width: 100%;
-		height: 70px;
-		z-index: 1;
-		bottom: 0;
-		/*background-color: #ffffff;*/
-		background-image: linear-gradient(0deg, #f5f5f5, hsla(37, 87%, 97%, 0));
-	}
-	.sl--content-btn {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		width: 37px;
-		height: 37px;
-		cursor: pointer;
-		z-index: 1;
-	}
-	.content-hide-btn {
-		transform: scale(0, 0);
-	}
+  .swiper-container {
+    width: 95%;
+    height: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .sl-card-wrapper {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+  }
+
+  .sl-gradient {
+    background-position: center 210px;
+  }
+
+  .sl-bkg-img {
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .sl--content-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: width 250ms, height 250ms;
+    overflow: hidden;
+  }
+
+  .sl--content-wrapper-inactive {
+    width: 101%;
+    height: 541px;
+  }
+
+  .sl--content-wrapper-active {
+    width: 101%;
+    height: 100%;
+  }
+
+  .sl--content-container {
+    width: 100%;
+    height: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 1;
+  }
+
+  .sl--card-hide {
+    transform: translate(0, 410px);
+    transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+      width 250ms;
+    height: 568px;
+  }
+
+  .sl--card-reveal {
+    transform: translate(0, 0);
+    transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+      width 250ms;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+
+  .sl--content-container h2 {
+    font-size: 30px;
+    word-spacing: 2px;
+    letter-spacing: -1.4px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .sl--sub-text {
+    margin-bottom: 0;
+    transition: margin 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  .sl--card-reveal .sl--sub-text {
+    margin-top: 12%;
+  }
+
+  .sl--content-container .sl--card-content {
+    font-weight: 300;
+    margin-top: 15px;
+    overflow-y: auto;
+  }
+
+  .sl--link {
+    color: #04b7ac;
+    margin-bottom: 15px;
+  }
+
+  .sl--card-nav-container {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    bottom: 0;
+    background-image: linear-gradient(0deg, #f5f5f5, hsla(37, 87%, 97%, 0));
+  }
+
+  .sl--content-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .content-hide-btn {
+    transform: scale(0, 0);
+  }
 }
+
 @media only screen and (min-width: 375px) {
-	/* 375 */
-	/*-------------------------------------------------------*/
-	/* Card Bkg Img: 375
-	/*-------------------------------------------------------*/
+  .sl-gradient {
+    background-position: center 300px;
+  }
 
-	.sl-gradient {
-		background-position: center 300px;
-	}
+  .sl-card-wrapper,
+  .sl--content-wrapper-inactive {
+    height: 600px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Card Content: 375
-	/*-------------------------------------------------------*/
+  .sl--content-wrapper-inactive {
+    width: 91%;
+  }
 
-	.sl-card-wrapper,
-	.sl--content-wrapper-inactive {
-		height: 600px;
-	}
-	.sl--content-wrapper-inactive {
-		width: 91%;
-	}
-	.sl--content-container {
-		height: 372px;
-	}
-	.sl--card-reveal {
-		height: 100%;
-		width: 100%;
-	}
-	.sl--card-hide {
-		transform: translate(0, 465px);
-		height: 667px;
-	}
-	/*@-moz-document url-prefix() {
-		.sl--card-hide {
-			color: red;
-			transform: translate(0, 265px);
-			border: red 5px solid;
-		}
-		
-	}*/
+  .sl--content-container {
+    height: 372px;
+  }
+
+  .sl--card-reveal {
+    height: 100%;
+    width: 100%;
+  }
+
+  .sl--card-hide {
+    transform: translate(0, 465px);
+    height: 667px;
+  }
 }
+
 @media only screen and (min-width: 414px) {
-	/* 414 */
-	/*-------------------------------------------------------*/
-	/* SL Header: 414
-	/*-------------------------------------------------------*/
-	.sl-header-wrapper h3 {
-		font-size: 55px;
-	}
+  .sl-header-wrapper h3 {
+    font-size: 55px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Card Content: 414
-	/*-------------------------------------------------------*/
-	.sl-card-wrapper,
-	.sl--content-wrapper-inactive {
-		height: 650px;
-	}
-	.sl--card-hide {
-		height: 740px;
-		transform: translate(0, 495px);
-	}
+  .sl-card-wrapper,
+  .sl--content-wrapper-inactive {
+    height: 650px;
+  }
+
+  .sl--card-hide {
+    height: 740px;
+    transform: translate(0, 495px);
+  }
 }
+
 @media only screen and (min-width: 568px) {
-	/* 568 */
+  /* 568 */
 }
+
 @media only screen and (min-width: 667px) {
-	/* 667px */
+  /* 667px */
 }
+
 @media only screen and (min-width: 736px) {
-	/* 736px */
+  /* 736px */
 }
-/*Tablet*/
 
 @media only screen and (min-width: 768px) {
-	/* 768 */
-	/*-------------------------------------------------------*/
-	/* SL Main Container: 768
-	/*-------------------------------------------------------*/
-	.sl-main-container {
-		width: 768px;
-		margin: 0 auto;
-	}
+  .sl-main-container {
+    width: 768px;
+    margin: 0 auto;
+  }
 
-	/*-------------------------------------------------------*/
-	/* SL Header: 768
-	/*-------------------------------------------------------*/
-	.sl-header-wrapper {
-		padding: 0 5%;
-	}
-	.sl-header-wrapper h3 {
-		width: 300px;
-		font-size: 65px;
-	}
-	.sl-header-wrapper p {
-		width: 505px;
-	}
+  .sl-header-wrapper {
+    padding: 0 5%;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Swiper: 768
-	/*-------------------------------------------------------*/
-	.swiper-container {
-		width: 690px;
-	}
+  .sl-header-wrapper h3 {
+    width: 300px;
+    font-size: 65px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Card Content: 768
-	/*-------------------------------------------------------*/
-	.sl-card-wrapper {
-		width: 325px;
-		height: 540px;
-	}
-	.sl--content-wrapper-inactive {
-		width: 290px;
-		height: 100%;
-	}
-	.sl--content-wrapper-active {
-		width: 101%;
-	}
-	.sl--card-hide {
-		transform: translate(0, 375px);
-	}
-	.sl-gradient {
-		background-position: center 185px;
-	}
+  .sl-header-wrapper p {
+    width: 505px;
+  }
+
+  .swiper-container {
+    width: 690px;
+  }
+
+  .sl-card-wrapper {
+    width: 325px;
+    height: 540px;
+  }
+
+  .sl--content-wrapper-inactive {
+    width: 290px;
+    height: 100%;
+  }
+
+  .sl--content-wrapper-active {
+    width: 101%;
+  }
+
+  .sl--card-hide {
+    transform: translate(0, 375px);
+  }
+
+  .sl-gradient {
+    background-position: center 185px;
+  }
 }
-/*    Desktop    */
 
 @media only screen and (min-width: 1024px) {
-	/* 1024 */
-	/*-------------------------------------------------------*/
-	/* Main Wrapper: 1024
-	/*-------------------------------------------------------*/
+  .sl-main-container {
+    width: 1024px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* SL Main Container: 1024
-	/*-------------------------------------------------------*/
-	.sl-main-container {
-		width: 1024px;
-	}
+  .sl-header-wrapper {
+    padding: 50px 2% 0 5%;
+    width: 500px;
+    display: inline-block;
+    float: left;
+  }
 
-	/*-------------------------------------------------------*/
-	/* SL Header: 1024
-	/*-------------------------------------------------------*/
-	.sl-header-wrapper {
-		padding: 50px 2% 0 5%;
-		width: 500px;
-		display: inline-block;
-		float: left;
-	}
-	.sl-header-wrapper p {
-		width: 100%;
-	}
+  .sl-header-wrapper p {
+    width: 100%;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Swiper: 1024
-	/*-------------------------------------------------------*/
-	.sl-wrapper {
-		height: 540px;
-		width: 522px;
-		display: inline-block;
-	}
+  .sl-wrapper {
+    height: 540px;
+    width: 522px;
+    display: inline-block;
+  }
 
-	.swiper-container {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translate(0, -50%);
-		width: 505px;
-		height: 540px;
-	}
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: block;
-	}
+  .swiper-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 505px;
+    height: 540px;
+  }
 
-	/*-------------------------------------------------------*/
-	/* Prev/Next Slide Cover: 1024
-	/*-------------------------------------------------------*/
-	.sl-nav {
-		display: block;
-	}
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+
+  .sl-nav {
+    display: block;
+  }
 }
+
 @media only screen and (min-width: 1140px) {
-	/* 1140 */
+  /* 1140 */
 }
+
 @media only screen and (min-width: 1440px) {
-	/* 1440 */
-	/*-------------------------------------------------------*/
-	/* Slide Layout: 1024
-	/*-------------------------------------------------------*/
-	.sl-main-container {
-		width: 1440px;
-	}
-	.sl-wrapper,
-	.swiper-container {
-		width: 920px;
-	}
+  /* 1440 */
+  .sl-main-container {
+    width: 1440px;
+  }
+
+  .sl-wrapper,
+  .swiper-container {
+    width: 920px;
+  }
 }
+
 @media only screen and (min-width: 1662px) {
-	/* 1662px */
+  /* 1662px */
 }
