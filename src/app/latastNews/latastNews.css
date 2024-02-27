@@ -1,16 +1,11 @@
 
 
-hr { /*dummy content*/
-  height: 6px;
-  border: none;
-  background: rgba(0, 0, 0, 0.1);
-} 
 
-hr:last-child {  /*dummy content*/
+hr:last-child {  
   margin-right: 60%;
 }
 
-hr.image { /*dummy content*/
+hr.image { 
   padding-bottom: 50%;
 } 
 

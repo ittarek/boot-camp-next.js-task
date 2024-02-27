@@ -89,9 +89,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        <div className="footer-bottom">
-          &copy; 2023 Fiya | Created by Zaidan
-        </div>
+      
       </footer>
       <svg style={{ position: "fixed", top: "100vh" }}>
         <defs>

@@ -27,10 +27,10 @@ const aboutPage  = () =>{
               data-aos-duration="2000"
             >
          
-              <Image width={100} height={100}
+              <Image width={500} height={500}
               src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
                 alt="image"
-                className="w-100 mx-2" 
+                className=" mx-2" 
               />
             </div>
           </div>
