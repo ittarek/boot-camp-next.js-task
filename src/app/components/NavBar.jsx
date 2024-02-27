@@ -14,8 +14,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import NavLinks from "./NavLinks";
+
+
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+
 import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {

@@ -1,6 +1,7 @@
 
 import "./about.css";
 import CountUp from "../components/CountUp"
+import Image from "next/image";
 // import NavBar from "./components/NavBar";
 
 const aboutPage  = () =>{
@@ -25,10 +26,11 @@ const aboutPage  = () =>{
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
             >
-              <img
-                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+         
+              <Image width={100} height={100}
+              src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
                 alt="image"
-                className="w-100 mx-2"
+                className="w-100 mx-2" 
               />
             </div>
           </div>

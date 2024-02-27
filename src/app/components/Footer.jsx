@@ -1,6 +1,7 @@
 'use client'
  import React, { useEffect } from 'react';
 import "./footer.css"
+import  Image  from 'next/image';
 const Footer = () => {
   useEffect(() => {
     //  Get the bubbles container
@@ -18,24 +19,30 @@ const Footer = () => {
       bubblesContainer.appendChild(bubble);
     }
 
-    // Cleanup function to remove bubbles when component unmounts
+    
     return () => {
       bubblesContainer.innerHTML = "";
     };
-  }, []); // Empty dependency array to run the effect only once
-
+  }, []); 
   return (
     <div>
       <footer className="footer mx-auto">
         <div className="bubbles"></div>
         <div className="footer-content">
           <div className="about-logo">
-            <img src="fiya.png" alt="Your Logo" />
+            <Image
+              width={100}
+              height={100}
+              src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Your Logo"
+            />
+        
           </div>
           <div className="footer-section about">
             <h1>About Us</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div className="footer-section links">

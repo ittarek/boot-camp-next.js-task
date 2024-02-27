@@ -1,7 +1,8 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import "./latastNews.css";
-import { Image } from 'next/image';
+import Image  from "next/image";
 
 const LatestNews = () => {
   const [newsData, setNewsData] = useState([]);
@@ -19,12 +20,9 @@ const LatestNews = () => {
       <div className="archive">
         <article className="article">
           1
-          {/* <Image
-              width={500}
-              height={500}
-             
-            /> */}
-          <img
+          <Image
+            width={500}
+            height={500}
             className="image"
             src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Picture of the author"
@@ -50,9 +48,11 @@ const LatestNews = () => {
           been raped by her riding instructor. The Horseman, she called him.
           Having groomed her for assault, he then persuaded her that she was in
           love with him.
-          <img
+          <Image
+            width={500}
+            height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
           />
         </article>
         <article className="article">
@@ -110,9 +110,11 @@ const LatestNews = () => {
           been raped by her riding instructor. The Horseman, she called him.
           Having groomed her for assault, he then persuaded her that she was in
           love with him.
-          <img
+          <Image
+            width={500}
+            height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
           />
         </article>
         <article className="article">
@@ -121,9 +123,11 @@ const LatestNews = () => {
           been raped by her riding instructor. The Horseman, she called him.
           Having groomed her for assault, he then persuaded her that she was in
           love with him.
-          <img
+          <Image
+            width={500}
+            height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
           />
         </article>
         <article className="article">
@@ -139,9 +143,11 @@ const LatestNews = () => {
           been raped by her riding instructor. The Horseman, she called him.
           Having groomed her for assault, he then persuaded her that she was in
           love with him.
-          <img
+          <Image
+            width={500}
+            height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
           />
         </article>
         <article className="article">
@@ -164,3 +170,4 @@ const LatestNews = () => {
 };
 
 export default LatestNews;
+

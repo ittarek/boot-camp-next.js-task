@@ -1,0 +1,737 @@
+<style>* {
+	box-sizing: border-box;
+}
+body {
+	/*Removing touch highlights on smartphones*/
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	padding-top: 0;
+	font-family: "Rubik", sans-serif;
+}
+
+.main-wrapper {
+	max-width: 1662px;
+	margin: 0 auto;
+}
+
+/*-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------*/
+/* SLIDE LAYOUT
+/*-------------------------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------*/
+.sl-wrapper {
+	position: relative;
+}
+.sl-nav {
+	position: relative;
+	width: 100px;
+	height: 60px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	background-image: url();
+}
+.swiper-button-next,
+.swiper-button-prev {
+	width: 35px;
+}
+
+/*-------------------------------------------------------*/
+/* Card Bkg Img
+/*-------------------------------------------------------*/
+
+.sl-bkg-img,
+.sl-gradient {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.sl-img-1 {
+	background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2018/08/Headshot.png");
+}
+.sl-img-2 {
+	background-image: url("https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/317844508_516205937191713_8988161731860358304_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yOKLcnw5hVoAX81HXDC&_nc_oc=AQlIGwkEOZ_LforoGHznrWrgIokL1vCgeOb3lx_6AxbLXiED0NlGbDqyvkQiW7J0223eEEnh9_fswyKMd1LAMLnE&_nc_ht=scontent-dfw5-2.xx&oh=00_AfDYkuSxz8S8ZtPPSCeK-gDcxPiv_B3K3rZwDc3OwNjamA&oe=65B078E7");
+}
+.sl-img-3 {
+	background-image: url("https://johnhunterhomebuilders.com/wp-content/uploads/2021/03/FalonCarpenter-3.jpg");
+}
+.sl-gradient {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/gradient.png");
+	z-index: 1;
+}
+/*-------------------------------------------------------*/
+/* Card Content
+/*-------------------------------------------------------*/
+
+.sl--content-container {
+	position: absolute;
+	background-color: #ffffff;
+}
+.sl--content-container h2 {
+	text-transform: uppercase;
+}
+.sl--sub-text {
+	font-weight: 300;
+}
+.content-reveal-btn {
+	background-color: #04b7ac;
+}
+.sl--show-card-info,
+.sl--close-card-info {
+	fill: #ffffff;
+}
+.sl--show-card-info {
+	transform: scale(0.6, 0.6);
+	-webkit-transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.sl--close-card-info {
+	-ms-transform: rotate(45deg) scale(0.6, 0.6);
+	-webkit-transform: rotate(45deg) scale(0.6, 0.6);
+	transform: rotate(45deg) scale(0.6, 0.6);
+	-webkit-transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/*--------------------------
+
+     Media Queries 
+
+--------------------------*/
+/*    Mobile    */
+
+@media only screen and (min-width: 320px) {
+	/* 320px */
+
+	/*-------------------------------------------------------*/
+	/* SL Header: 320
+	/*-------------------------------------------------------*/
+	.sl-header-wrapper {
+		padding: 0 18px;
+	}
+	.sl-header-wrapper h3 {
+		font-size: 50px;
+		font-weight: 900;
+		line-height: 80%;
+		letter-spacing: -1.4px;
+		margin: 10px 0;
+	}
+	.sl-header-wrapper h4 {
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0;
+		line-height: 100%;
+		letter-spacing: -1.4px;
+		word-spacing: 2.4px;
+	}
+	.sl-header-wrapper p {
+		font-weight: 300;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Prev/Next Slide Cover: 320
+	/*-------------------------------------------------------*/
+	.sl-nav {
+		display: none;
+	}
+	.swiper-slide-prev .slide-cover,
+	.swiper-slide-next .slide-cover,
+	.slide-cover {
+		background-color: #ffffff;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		opacity: 0.75;
+		-webkit-transition: opacity 300ms;
+		transition: opacity 300ms;
+		visibility: visible;
+	}
+	.swiper-slide-active .slide-cover {
+		position: absolute;
+		opacity: 0;
+		-webkit-transition: visibility 0s 0.5s, opacity 300ms;
+		transition: visibility 0s 0.5s, opacity 300ms;
+		height: 100%;
+		width: 100%;
+		background-color: #ffffff;
+		z-index: 2;
+		visibility: hidden;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Swiper: 320
+	/*-------------------------------------------------------*/
+
+	.swiper-container {
+		width: 95%;
+		height: 100%;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+	/*-------------------------------------------------------*/
+	/* Card: 320
+	/*-------------------------------------------------------*/
+
+	.sl-card-wrapper {
+		position: relative;
+		height: 540px;
+		overflow: hidden;
+	}
+	/*-------------------------------------------------------*/
+	/* Card Bkg Img: 320
+	/*-------------------------------------------------------*/
+
+	.sl-gradient {
+		background-position: center 210px;
+	}
+	.sl-bkg-img {
+		background-size: cover;
+		background-position: center top;
+	}
+	/*-------------------------------------------------------*/
+	/* Card Content: 320
+	/*-------------------------------------------------------*/
+
+	.sl--content-wrapper {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		-webkit-transition: width 250ms, height 250ms;
+		transition: width 250ms, height 250ms;
+		overflow: hidden;
+	}
+	.sl--content-wrapper-inactive {
+		width: 101%;
+		height: 541px;
+	}
+	.sl--content-wrapper-active {
+		width: 101%;
+		height: 100%;
+	}
+	.sl--content-container {
+		width: 100%;
+		height: auto;
+		padding-left: 16px;
+		padding-right: 16px;
+		z-index: 1;
+	}
+	.sl--card-hide {
+		transform: translate(0, 410px);
+		-webkit-transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+			width 250ms;
+		transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+			width 250ms;
+		height: 568px;
+	}
+	.sl--card-reveal {
+		transform: translate(0, 0);
+		-webkit-transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+			width 250ms;
+		transition: transform 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
+			width 250ms;
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		/*padding: 100px 0px;*/
+		padding-top: 20px;
+		padding-bottom: 100px;
+	}
+	.sl--content-container h2 {
+		font-size: 30px;
+		word-spacing: 2px;
+		letter-spacing: -1.4px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.sl--sub-text {
+		margin-bottom: 0;
+		-webkit-transition: margin 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transition: margin 250ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+	.sl--card-reveal .sl--sub-text {
+		margin-top: 12%;
+	}
+	.sl--content-container .sl--card-content {
+		font-weight: 300;
+		margin-top: 15px;
+		overflow-y: auto;
+	}
+	.sl--link {
+		color: #04b7ac;
+		margin-bottom: 15px;
+	}
+	.sl--card-nav-container {
+		position: absolute;
+		width: 100%;
+		height: 70px;
+		z-index: 1;
+		bottom: 0;
+		/*background-color: #ffffff;*/
+		background-image: linear-gradient(0deg, #f5f5f5, hsla(37, 87%, 97%, 0));
+	}
+	.sl--content-btn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 37px;
+		height: 37px;
+		cursor: pointer;
+		z-index: 1;
+	}
+	.content-hide-btn {
+		transform: scale(0, 0);
+	}
+}
+@media only screen and (min-width: 375px) {
+	/* 375 */
+	/*-------------------------------------------------------*/
+	/* Card Bkg Img: 375
+	/*-------------------------------------------------------*/
+
+	.sl-gradient {
+		background-position: center 300px;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Card Content: 375
+	/*-------------------------------------------------------*/
+
+	.sl-card-wrapper,
+	.sl--content-wrapper-inactive {
+		height: 600px;
+	}
+	.sl--content-wrapper-inactive {
+		width: 91%;
+	}
+	.sl--content-container {
+		height: 372px;
+	}
+	.sl--card-reveal {
+		height: 100%;
+		width: 100%;
+	}
+	.sl--card-hide {
+		transform: translate(0, 465px);
+		height: 667px;
+	}
+	/*@-moz-document url-prefix() {
+		.sl--card-hide {
+			color: red;
+			transform: translate(0, 265px);
+			border: red 5px solid;
+		}
+		
+	}*/
+}
+@media only screen and (min-width: 414px) {
+	/* 414 */
+	/*-------------------------------------------------------*/
+	/* SL Header: 414
+	/*-------------------------------------------------------*/
+	.sl-header-wrapper h3 {
+		font-size: 55px;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Card Content: 414
+	/*-------------------------------------------------------*/
+	.sl-card-wrapper,
+	.sl--content-wrapper-inactive {
+		height: 650px;
+	}
+	.sl--card-hide {
+		height: 740px;
+		transform: translate(0, 495px);
+	}
+}
+@media only screen and (min-width: 568px) {
+	/* 568 */
+}
+@media only screen and (min-width: 667px) {
+	/* 667px */
+}
+@media only screen and (min-width: 736px) {
+	/* 736px */
+}
+/*Tablet*/
+
+@media only screen and (min-width: 768px) {
+	/* 768 */
+	/*-------------------------------------------------------*/
+	/* SL Main Container: 768
+	/*-------------------------------------------------------*/
+	.sl-main-container {
+		width: 768px;
+		margin: 0 auto;
+	}
+
+	/*-------------------------------------------------------*/
+	/* SL Header: 768
+	/*-------------------------------------------------------*/
+	.sl-header-wrapper {
+		padding: 0 5%;
+	}
+	.sl-header-wrapper h3 {
+		width: 300px;
+		font-size: 65px;
+	}
+	.sl-header-wrapper p {
+		width: 505px;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Swiper: 768
+	/*-------------------------------------------------------*/
+	.swiper-container {
+		width: 690px;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Card Content: 768
+	/*-------------------------------------------------------*/
+	.sl-card-wrapper {
+		width: 325px;
+		height: 540px;
+	}
+	.sl--content-wrapper-inactive {
+		width: 290px;
+		height: 100%;
+	}
+	.sl--content-wrapper-active {
+		width: 101%;
+	}
+	.sl--card-hide {
+		transform: translate(0, 375px);
+	}
+	.sl-gradient {
+		background-position: center 185px;
+	}
+}
+/*    Desktop    */
+
+@media only screen and (min-width: 1024px) {
+	/* 1024 */
+	/*-------------------------------------------------------*/
+	/* Main Wrapper: 1024
+	/*-------------------------------------------------------*/
+
+	/*-------------------------------------------------------*/
+	/* SL Main Container: 1024
+	/*-------------------------------------------------------*/
+	.sl-main-container {
+		width: 1024px;
+	}
+
+	/*-------------------------------------------------------*/
+	/* SL Header: 1024
+	/*-------------------------------------------------------*/
+	.sl-header-wrapper {
+		padding: 50px 2% 0 5%;
+		width: 500px;
+		display: inline-block;
+		float: left;
+	}
+	.sl-header-wrapper p {
+		width: 100%;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Swiper: 1024
+	/*-------------------------------------------------------*/
+	.sl-wrapper {
+		height: 540px;
+		width: 522px;
+		display: inline-block;
+	}
+
+	.swiper-container {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		width: 505px;
+		height: 540px;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: block;
+	}
+
+	/*-------------------------------------------------------*/
+	/* Prev/Next Slide Cover: 1024
+	/*-------------------------------------------------------*/
+	.sl-nav {
+		display: block;
+	}
+}
+@media only screen and (min-width: 1140px) {
+	/* 1140 */
+}
+@media only screen and (min-width: 1440px) {
+	/* 1440 */
+	/*-------------------------------------------------------*/
+	/* Slide Layout: 1024
+	/*-------------------------------------------------------*/
+	.sl-main-container {
+		width: 1440px;
+	}
+	.sl-wrapper,
+	.swiper-container {
+		width: 920px;
+	}
+}
+@media only screen and (min-width: 1662px) {
+	/* 1662px */
+}
+</style>
+<div class="main-wrapper">
+	<div class="sl-main-container">
+		<div class="sl-header-wrapper">
+			<h4> Connect with Our </h4>
+			<h3>Preferred Partners</h3>
+			<p>Explore our Preferred Partners – trusted experts bringing a wealth of experience to enhance your home journey. From skilled builders to seasoned realtors, discover a network dedicated to ensuring a seamless and successful experience for every homeowner.</p>
+			<!-- If we need navigation buttons -->
+			<div class="sl-nav">
+				<div class="swiper-button-next">
+					<svg id="nextBtn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+						<style>
+							#nextBtn {
+								fill: #04b7ac;
+							}
+						</style>
+						<path d="M32.5 0A32.5 32.5 0 1 0 65 32.5 32.5 32.5 0 0 0 32.5 0zm0 62A29.5 29.5 0 1 1 62 32.5 29.53 29.53 0 0 1 32.5 62zm-5.22-40.28L38.06 32.5 27.28 43.28l2.12 2.12 12.9-12.9-12.9-12.9z" />
+					</svg>
+				</div>
+				<div class="swiper-button-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" id="prevBtn" data-name="Layer 1" viewBox="0 0 65 65">
+						<style>
+							#prevBtn {
+								fill: #04b7ac;
+							}
+						</style>
+						<path d="M0 32.5A32.5 32.5 0 1 0 32.5 0 32.5 32.5 0 0 0 0 32.5zm3 0A29.5 29.5 0 1 1 32.5 62 29.53 29.53 0 0 1 3 32.5zm32.6-12.9L22.7 32.5l12.9 12.9 2.12-2.12L26.94 32.5l10.78-10.78z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="sl-wrapper">
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+
+					<div class="swiper-slide sl--slide">
+						<div class="slide-cover"></div>
+						<div class="sl-card-wrapper">
+							<div class="sl-gradient"></div>
+							<div class="sl-img-1 sl-bkg-img"></div>
+							<div class="sl--content-wrapper sl--content-wrapper-inactive">
+								<div class="sl--content-container sl--card-hide">
+									<p class="sl--sub-text">Jeff Kelly</p>
+									<h2>Keller Williams Realty</h2>
+									<p class="sl--card-content">Jeff Kelly, with a decade of Realtor experience and expertise in land development, mortgage, and insurance, collaborates with John Hunter Home Builders. Jeff and his team list John Hunter homes and represent buyers. If you're unrepresented, Jeff offers a discounted rate to list your current home upon closing a new John Hunter Home Builders home. Experience seamless transactions with Jeff and John Hunter Home Builders.
+										role model for men and women everywhere.</p>
+									<div class="sl--link">More Info</div>
+								</div>
+
+								<!-- Card Nav GRP -->
+								<div class="sl--card-nav-container">
+									<!-- Reveal info btn -->
+									<div class="sl--content-btn content-reveal-btn">
+										<svg class="card-nav-gfx sl--show-card-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.63 113.63">
+											<path d="M105.56 48.75H64.88V8.06a8.06 8.06 0 0 0-16.12 0v40.69H8.06a8.06 8.06 0 0 0 0 16.13h40.69v40.69a8.06 8.06 0 0 0 16.13 0V64.88h40.69a8.06 8.06 0 0 0 0-16.12z" />
+										</svg>
+									</div>
+								</div>
+								<!-- END: Card Nav GRP -->
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="slide-cover"></div>
+						<div class="sl-card-wrapper">
+							<div class="sl-gradient"></div>
+							<div class="sl-img-2 sl-bkg-img"></div>
+							<div class="sl--content-wrapper sl--content-wrapper-inactive">
+								<div class="sl--content-container sl--card-hide">
+									<p class="sl--sub-text">Mike Turk</p>
+									<h2>Certainty<br />Home Lending</h2>
+									<p class="sl--card-content">Jeff Kelly, with a decade of Realtor experience and expertise in land development, mortgage, and insurance, collaborates with John Hunter Home Builders. Jeff and his team list John Hunter homes and represent buyers. If you're unrepresented, Jeff offers a discounted rate to list your current home upon closing a new John Hunter Home Builders home. Experience seamless transactions with Jeff and John Hunter Home Builders.</p>
+									<div class="sl--link">Learn More</div>
+								</div>
+
+								<!-- Card Nav GRP -->
+								<div class="sl--card-nav-container">
+									<!-- Reveal info btn -->
+									<div class="sl--content-btn content-reveal-btn">
+										<svg class="card-nav-gfx sl--show-card-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.63 113.63">
+											<path d="M105.56 48.75H64.88V8.06a8.06 8.06 0 0 0-16.12 0v40.69H8.06a8.06 8.06 0 0 0 0 16.13h40.69v40.69a8.06 8.06 0 0 0 16.13 0V64.88h40.69a8.06 8.06 0 0 0 0-16.12z" />
+										</svg>
+									</div>
+								</div>
+								<!-- END: Card Nav GRP -->
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="slide-cover"></div>
+						<div class="sl-card-wrapper">
+							<div class="sl-gradient"></div>
+							<div class="sl-img-3 sl-bkg-img"></div>
+
+							<div class="sl--content-wrapper sl--content-wrapper-inactive">
+								<div class="sl--content-container sl--card-hide">
+									<p class="sl--sub-text">Falon Carpenter</p>
+									<h2>Truly Title</h2>
+									<p class="sl--card-content">Since 2003, Falon Carpenter has excelled in the title industry. With precision and a focus on accuracy, she ensures smooth closings and values open communication among all parties. Falon finds joy in seeing customers' smiles on closing day, whether they've built a custom home or downsized for retirement. Beyond work, she cherishes time with family and friends, enjoying vacations and reading.</p>
+									<div class="sl--link">More Info</div>
+								</div>
+
+								<!-- Card Nav GRP -->
+								<div class="sl--card-nav-container">
+									<!-- Reveal info btn -->
+									<div class="sl--content-btn content-reveal-btn">
+										<svg class="card-nav-gfx sl--show-card-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.63 113.63">
+											<path d="M105.56 48.75H64.88V8.06a8.06 8.06 0 0 0-16.12 0v40.69H8.06a8.06 8.06 0 0 0 0 16.13h40.69v40.69a8.06 8.06 0 0 0 16.13 0V64.88h40.69a8.06 8.06 0 0 0 0-16.12z" />
+										</svg>
+									</div>
+								</div>
+								<!-- END: Card Nav GRP -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<!--<div class="swiper-pagination"></div>-->
+
+			</div>
+		</div>
+		<!-- END: .sl-wrapper -->
+
+	</div>
+</div>
+
+<script>$(document).ready(function () {
+	"use strict";
+
+	/* Swiper
+	-------------------------------------------------------*/
+	//initialize swiper when document ready
+	var mySwiper = new Swiper(".swiper-container", {
+		// Navigation arrows
+		nextButton: ".swiper-button-next",
+		prevButton: ".swiper-button-prev",
+		slidesPerView: 2.7,
+		centeredSlides: true,
+		breakpoints: {
+			1440: {
+				slidesPerView: 2.6
+			},
+			1439: {
+				slidesPerView: 1.45
+			},
+			1024: {
+				slidesPerView: 1.45
+			},
+			1023: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 2
+			},
+			568: {
+				slidesPerView: 1.5,
+				spaceBetween: 10
+			},
+			414: {
+				slidesPerView: 1.09,
+				spaceBetween: 3
+			},
+			320: {
+				slidesPerView: 1.09,
+				spaceBetween: 3
+			}
+		}
+	});
+
+	/* Info Card
+	-------------------------------------------------------*/
+	var $revealCardContentBtn = $(".sl--card-nav-container"),
+		$contentContainer = $(
+			".sl-card-wrapper .sl--content-wrapper .sl--content-container"
+		),
+		$navGFX = $(
+			".sl-card-wrapper .sl--content-wrapper .sl--card-nav-container .sl--content-btn .card-nav-gfx"
+		);
+
+	$revealCardContentBtn.on("click", function () {
+		var parent = $(this).closest(".swiper-slide");
+
+		// IC Container
+		parent.siblings().find($contentContainer).removeClass("sl--card-reveal");
+		parent.siblings().find($contentContainer).addClass("sl--card-hide");
+		parent.find($contentContainer).toggleClass("sl--card-hide sl--card-reveal");
+
+		// IC Nav wrapper
+		parent
+			.siblings()
+			.find(".sl--content-wrapper")
+			.removeClass("sl--content-wrapper-active");
+		parent
+			.siblings()
+			.find(".sl--content-wrapper")
+			.addClass("sl--content-wrapper-inactive");
+		parent
+			.find(".sl--content-wrapper")
+			.toggleClass("sl--content-wrapper-inactive sl--content-wrapper-active");
+
+		// IC Nav GFX
+		parent.siblings().find($navGFX).removeClass("sl--close-card-info");
+		parent.siblings().find($navGFX).addClass("sl--show-card-info");
+		parent.find($navGFX).toggleClass("sl--show-card-info sl--close-card-info");
+	});
+
+	/* Hide content on slide change 
+	-------------------------------------------------------*/
+	mySwiper.on("onSlideChangeStart", function () {
+		if ($contentContainer.hasClass("sl--card-reveal")) {
+			var $CI_ContentWrapper = $(".sl--content-wrapper");
+
+			$contentContainer.removeClass("sl--card-reveal");
+			$contentContainer.addClass("sl--card-hide");
+			$navGFX.removeClass("sl--close-card-info");
+			$navGFX.addClass("sl--show-card-info");
+			$CI_ContentWrapper.removeClass("sl--content-wrapper-active");
+			$CI_ContentWrapper.addClass("sl--content-wrapper-inactive");
+		}
+	});
+
+	// Media Query
+	var windowWidth = $(window).width();
+	if (windowWidth === 320) {
+	}
+	if (windowWidth === 375) {
+	}
+	if (windowWidth === 414) {
+	}
+	if (windowWidth === 768) {
+	}
+	if (windowWidth === 1024) {
+	}
+}); //END: $(document)
+</script>
