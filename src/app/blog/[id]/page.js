@@ -8,4 +8,4 @@ const SignleBlog = () =>{
     );
 }
 
-export default SingleBLog;
+export default SingleBlog;
