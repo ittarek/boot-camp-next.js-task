@@ -22,7 +22,7 @@ import { useForm } from 'react-hook-form';
 
 
 
-export default function loginPage() {
+export default function LoginPage() {
    const { user, login } = useContext(AuthContext);
    const [error, setError] = useState("");
    const [showPassword, setShowPassword] = useState(false);
