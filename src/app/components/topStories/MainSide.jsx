@@ -15,13 +15,13 @@ const MainSide = () => {
       });
   }, []);
   return (
-    <div className="w-full mx-auto border-2">
+    <div className="w-full mx-auto border-2 scroll-smooth">
       <h2>Top Stories</h2>
       <div>
         {topData?.slice(0, 6).map((data, index) => (
-          <div key={data._id} className="card">
+          <div key={data._id} className="md:w-[400px] w-full mx-auto h-full my-11 card">
             <div className="card-img">
-              <Image className="mx-auto" width={400} height={250} src={data.image_url} alt="image"/>
+              <Image className="mx-auto" width={350} height={100} src={data?.image_url} alt="image"/>
             </div>
             <div className="card-content">
               <div className="content-capsules">

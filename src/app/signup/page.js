@@ -142,4 +142,4 @@ console.log( from )
   );
 };
 
-export default signUp;
+export default SignUp;

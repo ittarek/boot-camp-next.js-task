@@ -22,7 +22,7 @@ export default function Home() {
     
       <Container>
         {" "}
-        <div className="bannarImage flex flex-col justify-center items-center">
+        <div className="bannarImage flex flex-col justify-center items-center my-24 w-full">
           <h1 className="text-4xl text-black font-bold my-5 ">
             Next.js Framwork is learnning now
           </h1>

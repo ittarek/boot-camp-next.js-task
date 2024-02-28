@@ -11,7 +11,8 @@ import {
 const RightSide = () => {
 
   return (
-    <div className="sticky top-[65px]  ">
+    // sticky top-[65px] 
+    <div className=" ">
       <div className="social-container transition-style ">
         <h2>Join With Us</h2>
       </div>
