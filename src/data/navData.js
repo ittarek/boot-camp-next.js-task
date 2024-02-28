@@ -11,6 +11,20 @@ const commonNavData = [
     path: "/blog",
     title: "Blog",
   },
+  {
+    path:"/editors",
+    title:"Editors"
+  },{
+    path:"/social",
+    title:"Social"
+  },{
+    path:"/craime",
+    title:"Craime"
+  },{
+    path:"/internation",
+    title:"International"
+  }
+  
 ];
 
 export const afterLoginNavData = [

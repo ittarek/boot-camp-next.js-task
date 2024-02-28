@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import "./Stories.css"
+import Link from "next/link"
 const MainSide = () => {
   const [topData, setTopData] = useState([]);
 
@@ -17,8 +18,8 @@ const MainSide = () => {
     <div className="w-full mx-auto border-2">
       <h2>Top Stories</h2>
       <div>
-        {topData?.slice(0, 5).map((data, index) => (
-          <div key={data.id} className="card">
+        {topData?.slice(0, 6).map((data, index) => (
+          <div key={data._id} className="card">
             <div className="card-img">
               <Image className="mx-auto" width={400} height={250} src={data.image_url} alt="image"/>
             </div>
@@ -44,7 +45,7 @@ const MainSide = () => {
               </div>
               <div className="button">
                 <button>
-                  <b>Read More</b>
+                  <Link href={`/readMore/${data._id}`}><b>Read More</b></Link>
                 </button>
               </div>
             </div>

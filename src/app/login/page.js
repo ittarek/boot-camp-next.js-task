@@ -1,5 +1,5 @@
 'use client'
-import * as React from 'react';
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +13,9 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import AuthContext from '@/context/AuthContext';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 
 
@@ -20,14 +23,44 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 export default function loginPage() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+   const { user, login } = useContext(AuthContext);
+   const [error, setError] = useState("");
+   const [showPassword, setShowPassword] = useState(false);
+ 
+   // react hook form
+   const {
+     register,
+     handleSubmit,
+     watch,
+     formState: { errors },
+   } = useForm();
+   // password show function
+   const handleShowPassword = () => {
+     setShowPassword(preve => !preve);
+   };
+
+   const onSubmit = data => {
+     login(data.email, data.password)
+       .then(result => {
+         const loggedUser = result.user;
+         console.log(loggedUser);
+
+   
+
+       toast("SignUp successfull.", { duration: 3000, position: "top-center" });
+       })
+       .catch(error => {
+         setError(error.message);
+       });
+   };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     email: data.get('email'),
+  //     password: data.get('password'),
+  //   });
+  // };
 
   return (
 

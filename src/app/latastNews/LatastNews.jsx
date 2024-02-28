@@ -17,7 +17,7 @@ const LatestNews = () => {
   return (
     <div className="page mx-auto">
       <h1>LATEST NEWS</h1>
-      <div className="archive">
+      <div className="archive ">
         <article className="article">
           1
           <Image

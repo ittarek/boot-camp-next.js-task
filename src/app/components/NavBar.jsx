@@ -1,5 +1,5 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState,useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,19 +14,27 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import NavLinks from "./NavLinks";
-
-
+import Link from 'next/link';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaTiktok,
+  FaYoutube,
+} from "react-icons/fa";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-
+import AuthContext from "@/context/AuthContext";
 import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
+
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-
+const {user} = useContext(AuthContext)
+console.log(user?.email,"from nav bar")
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
   };
@@ -41,10 +49,12 @@ const NavBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-const navData = beforeLoginNavData;
-  return (
+ const navData = user?.email ?   afterLoginNavData : beforeLoginNavData;
 
-      <AppBar position="static">
+  return (
+    <section>
+      {" "}
+      <AppBar position="static" className=" bg-black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <NewspaperIcon
@@ -105,6 +115,25 @@ const navData = beforeLoginNavData;
                     </Typography>
                   </MenuItem>
                 ))}
+                {/* icon */}
+                <MenuItem>
+                  <Link href="www.facebook.com">
+                    {" "}
+                    <FaFacebookF />
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <FaInstagram />
+                </MenuItem>
+                <MenuItem>
+                  <FaTwitter />
+                </MenuItem>
+                <MenuItem>
+                  <FaTiktok />
+                </MenuItem>
+                <MenuItem>
+                  <FaYoutube />
+                </MenuItem>
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -141,13 +170,36 @@ const navData = beforeLoginNavData;
                     <NavLinks href={nav.path}> {nav.title} </NavLinks>
                   </Typography>
                 </MenuItem>
-              ))}
+              ))}{" "}
+              {/* icon */}
+              <Link className="my-auto" href="https://www.facebook.com/">
+                {" "}
+                <FaFacebookF />
+              </Link>
+              <MenuItem>
+                <Link className="my-auto" href="">
+                  {" "}
+                  <FaInstagram />
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <FaTwitter />
+              </MenuItem>
+              <MenuItem>
+                <FaTiktok />
+              </MenuItem>
+              <MenuItem>
+                <FaYoutube />
+              </MenuItem>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
+              <Tooltip title={user?.displayName ? user?.displayName  : "user"}>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar
+                    alt="Remy Sharp"
+                    src={user?.photoURL}
+                  />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -166,17 +218,18 @@ const navData = beforeLoginNavData;
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map(setting => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
+               <Box  onClick={handleCloseUserMenu} className="flex flex-col ">
+                    <MenuItem >Logout</MenuItem>
+                    <MenuItem>Profile</MenuItem>
+                   
+                  </Box>
               </Menu>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-
+ 
+    </section>
   );
-}
+};
 export default NavBar;
