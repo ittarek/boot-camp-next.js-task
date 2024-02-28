@@ -1,7 +1,7 @@
 
 
 
-const SignleBlog = () =>{
+const SingleBlog = () =>{
 
     return(
         <div>blog id</div>

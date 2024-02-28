@@ -11,7 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { FaUserAlt } from "react-icons/fa";
-import app  from "./../firebase/firebase.config"
+import app  from "../firbase/firebase.config"
 // import app from "@/firebase/firebase.config";
 // import app from "/firebase/firebase.config"
 // import app from "@/firebase/firebase.config";
