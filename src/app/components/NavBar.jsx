@@ -37,7 +37,7 @@ const { user, loggedOut } = useContext(AuthContext);
 const handleLogout = () =>{
   loggedOut()
   .then()
- 
+
 }
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
@@ -58,7 +58,7 @@ const handleLogout = () =>{
   return (
     <section>
       {" "}
-      <AppBar position="static" className=" bg-black">
+      <AppBar className=" bg-black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <NewspaperIcon
