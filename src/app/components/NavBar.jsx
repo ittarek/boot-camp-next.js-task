@@ -33,7 +33,7 @@ import { afterLoginNavData, beforeLoginNavData } from "@/data/navData";
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-const {user} = useContext(AuthContext)
+const { user, loggedOut } = useContext(AuthContext);
 const handleLogout = () =>{
   loggedOut()
   .then()
