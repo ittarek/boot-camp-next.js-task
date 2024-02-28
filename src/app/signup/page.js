@@ -20,6 +20,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useContext, useRef, useState } from "react";
 import AuthContext from "@/context/AuthContext";
 import { useRouter,useSearchParams } from "next/navigation";
+import SocailLogin from "../components/Socail/SocailLogin";
+
 
 
 
@@ -128,6 +130,7 @@ console.log( from )
             >
               Sign Up
             </Button>
+            <SocailLogin></SocailLogin>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="/login" variant="body2">

@@ -34,7 +34,11 @@ const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 const {user} = useContext(AuthContext)
-console.log(user?.email,"from nav bar")
+const handleLogout = () =>{
+  loggedOut()
+  .then()
+ 
+}
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
   };
@@ -194,12 +198,9 @@ console.log(user?.email,"from nav bar")
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title={user?.displayName ? user?.displayName  : "user"}>
+              <Tooltip title={user?.displayName ? user?.displayName : "user"}>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
-                    alt="Remy Sharp"
-                    src={user?.photoURL}
-                  />
+                  <Avatar alt="Remy Sharp" src={user?.photoURL} />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -218,17 +219,15 @@ console.log(user?.email,"from nav bar")
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-               <Box  onClick={handleCloseUserMenu} className="flex flex-col ">
-                    <MenuItem >Logout</MenuItem>
-                    <MenuItem>Profile</MenuItem>
-                   
-                  </Box>
+                <Box onClick={handleCloseUserMenu} className="flex flex-col ">
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                  <MenuItem>Profile</MenuItem>
+                </Box>
               </Menu>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
- 
     </section>
   );
 };
