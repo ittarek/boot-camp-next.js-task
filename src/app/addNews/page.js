@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
 
@@ -16,22 +16,25 @@ const {
 } = useForm();
 
 const onSubmit = data => {
-  // reset();
+    // Handle any form-specific logic here if needed
+    // reset(); // If reset is a function to reset the form, uncomment this line
 
-  fetch(
-    "https://kanban-task-server-92rik3h6b-ittarek.vercel.app/allTask/addNews",
-    {
+    // Make the POST request
+    fetch("https://kanban-task-server-4330zbruj-ittarek.vercel.app/addNews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
-    }
-  )
-    .then(res => res.json())
-    .then(result => {
-      console.log(result);
-    });
-  console.log(data);
-};
+    })
+      .then(res => res.json())
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  };
+
+ 
 return (
   <section className="mx-auto w-[600px] my-11">
     <form onSubmit={handleSubmit(onSubmit)}>

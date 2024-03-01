@@ -9,7 +9,7 @@
 
     width:1000px;
     height:600px;
-    padding:50px;
+    padding:30px;
     background-color: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 
@@ -17,11 +17,7 @@
 
 }
 
-#slide {
 
-
-
-}
 
 .itemSlide {
 
@@ -29,7 +25,7 @@
 
     height: 300px;
     width: 240px;
-    margin-top: 122px;
+    margin-top: 115px;
     height: 320px;
     background-position: center;
     /* display: inline-block; */

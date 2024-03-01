@@ -17,24 +17,22 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-//  const navigation = useNavigation();
+
+  
  const pathname = usePathname();
 
   const isHomePage = pathname === '/';
   return (
     <html lang="en">
       <body className={inter.className}>
-
-
         <Provider>
-     
-          <NavBar /> 
+          <NavBar />
           {isHomePage && <ContinueNews></ContinueNews>}
-            <main className="pt-24 min-h-[calc(100vh-68px)]">{children}</main>
+          <main className="pt-24 min-h-[calc(100vh-68px)]">{children}</main>
         </Provider>
-  
+
         <Footer />
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );

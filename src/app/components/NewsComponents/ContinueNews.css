@@ -1,5 +1,6 @@
 .sticky-top {
-    margin-top: -65px;
+    /* margin-top: -65px; */
+
 }
 
 .News-footer {
@@ -95,4 +96,12 @@
 .t-link {
     color: inherit !important;
     list-style: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .News-footer {
+
+    margin-top: 50px;
+  }
 }

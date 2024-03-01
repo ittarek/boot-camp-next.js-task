@@ -12,7 +12,7 @@ const RightSide = () => {
 
   return (
     // sticky top-[65px] 
-    <div className=" ">
+    <div className="w-full mx-auto ">
       <div className="social-container transition-style ">
         <h2>Join With Us</h2>
       </div>
@@ -20,24 +20,24 @@ const RightSide = () => {
       <div id="wrapper" className="square">
         <a className="item twitter">
           <i className="fa fa-twitter"></i>
-          <span className="count"></span>Followers
+          <span className="count"></span>Twitter
         </a>
         <a className="item facebook">
           <i className="fa fa-facebook"></i>
-          <span className="count"></span>Likes
+          <span className="count"></span>Facebook
         </a>
         <a className="item instagram">
           <i className="fa fa-instagram"></i>
-          <span className="count"> </span>Followers
+          <span className="count"> </span>Youtube
         </a>
         <a className="item google">
           <i className="fa fa-google-plus"></i>
-          <span className="count"></span>Followers
+          <span className="count"></span>Instragam
         </a>
     
         <a className="item linkedin">
           <i className="fa fa-linkedin"></i>
-          <span className="count"></span>Connections
+          <span className="count"></span>LinkedIn
         </a>
         <a className="item youtube">
           <i className="fa fa-youtube"></i>
