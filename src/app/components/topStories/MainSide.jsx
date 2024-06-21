@@ -11,48 +11,43 @@ const MainSide = () => {
       .then(res => res.json())
       .then(data => {
         setTopData(data);
-        console.log(data);
+        // console.log(data);
       });
   }, []);
   return (
-    <div className="w-full mx-auto border-2 scroll-smooth">
-      <h2>Top Stories</h2>
-      <div>
-        {topData?.slice(0, 6).map((data, index) => (
-          <div key={data._id} className="md:w-[400px] w-full mx-auto h-full my-11 card">
-            <div className="card-img">
-              <Image className="mx-auto" width={350} height={100} src={data?.image_url} alt="image"/>
-            </div>
-            <div className="card-content">
-              <div className="content-capsules">
-                <span>Topic 1</span>
-                <span> Topic 2 </span>
-              </div>
-              <div className="content-head">
-                <h2>Card Heading</h2>
-              </div>
-              <div className="content-body">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolorum debitis aut sequi quaerat. Nobis deleniti quibusdam
-                  perspiciatis perferendis dicta. Dicta, quia voluptas. Quos
-                  amet cupiditate pariatur perspiciatis ipsa optio accusamus.
-                  Dignissimos dolore incidunt deleniti, illo quam quis quas
-                  reprehenderit aliquid tenetur sapiente aperiam ea, ex facere
-                  nisi soluta nostrum voluptatem perferendis asperiores libero,
-                  at sint mollitia?
-                </p>
-              </div>
-              <div className="button">
-                <button>
-                  <Link href={`/readMore/${data._id}`}><b>Read More</b></Link>
-                </button>
-              </div>
-            </div>
+    <section>
+      {topData?.slice(0, 3).map((data, index) => (
+        <Link
+          href={`/readMore/${data._id}`}
+          key={data._id}
+          className={`block w-full mx-auto h-full duration-500  ${
+            index === 0
+              ? "mb-11 w-full  h-100"
+              : "flex gap-3 justify-between items-start  mb-6"
+          } ${index === 0 ? "" : ""}`} //
+        >
+           <div className={`hover:opacity-80 duration-500 ${index === 0 ? "" : "w-[150px]"}`}>
+            <Image
+              className={`${index === 0 ? "" : "w-[500px]"}`}
+              width={index === 0 ? 100 : 50}
+              height={index === 0 ? 100 : 50}
+              src={data?.image_url}
+              alt="image"
+              layout="responsive"
+            />
           </div>
-        ))}
-      </div>
-    </div>
+          <div>
+            <h2
+              className={`font-bold text-black cursor-pointer hover:underline ${
+                index === 0 ? "ml-0" : "ml-1"
+              }`}
+            >
+              {data.title}
+            </h2>
+          </div>
+        </Link>
+      ))}
+    </section>
   );
 };
 

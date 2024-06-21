@@ -22,7 +22,7 @@ const handleNextClick = () => {
  const imageUrl6 = "https://images.unsplash.com/photo-1561489396-888724a1543d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
  const imageUrl7 = "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
     return (
-      <div className="swiperContainer my-[50px] mx-auto">
+      <div className="swiperContainer    mx-auto ">
         <div id="slides">
           <div
             className="itemSlide"

@@ -12,6 +12,22 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "lh6.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "lh6.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
+      {
+        protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
       {

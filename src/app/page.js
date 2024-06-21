@@ -8,6 +8,14 @@ import Slider from "./gallary/Slider";
 import LatestNews from "./latastNews/LatastNews";
 import SlideNews from "./components/slideNews/SlideNews";
 import Bannar from "./components/bannar/Bannar";
+import MainSlide from "./components/Gallary-news/MainSlide";
+import SideSlide1 from "./components/Gallary-news/SideSlide1";
+import SideSlide2 from "./components/Gallary-news/SideSlide2";
+import SectionTitle from "./components/SharedComponents/SectionTitle";
+import EditorChioce from "./components/editorChoice/EditorChioce";
+import MeddleEeastNews from "./components/MiddelEeastnews/MeddleEeastNews";
+import TechStart from "./components/Teach&Startup/TechStart";
+import Subscription from "./components/Subscription/Subscription";
 // import SlideNews from "./components/SlideNews/SlideNews";
 
 // import LatestNews from './path-to-LatestNews-component/LatestNews';
@@ -17,14 +25,14 @@ export default function Home() {
   return (
     <main>
       <Container>
-      <Bannar></Bannar>
+        <Bannar></Bannar>
       </Container>
-    
+
       <Container>
         {" "}
         <div className="bannarImage flex flex-col justify-center items-center my-24 w-full">
           <h1 className="text-4xl text-black font-bold my-5 ">
-            Next.js Framwork is learnning now
+            Next.js Frame Work is Running now
           </h1>
           <p className="w-3/4 text-white">
             Next.js is a popular open-source React framework that is used to
@@ -35,28 +43,36 @@ export default function Home() {
         </div>
       </Container>
       <Container>
-        <section className="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4   ">
-          <div className=" grid-cols-3 ">
+        <SectionTitle sectionHeading="Top News"></SectionTitle>
+        <section className="mx-auto lg:flex justify-center w-[100%]  gap-[2%] ">
+          <div className="w-full lg:w-[23%] mx-auto">
             <LeftSide></LeftSide>
           </div>
-          <div className=" grid-cols-6 ">
+          <div className="mx-auto w-full  lg:w-[50%] ">
             <MainSide></MainSide>
           </div>
-          <div className=" grid-cols-3 ">
+          <div className="w-full lg:w-[23%] mx-auto">
             <RightSide></RightSide>
           </div>
         </section>
       </Container>
-
       <Container>
-        {" "}
-        <div className="my-[100px]">
-          <LatestNews></LatestNews>
-        </div>
+        <EditorChioce></EditorChioce>
       </Container>
       <Container>
-        {" "}
+        <MeddleEeastNews></MeddleEeastNews>
+      </Container>
+        <TechStart
+      ></TechStart>
+      <Container>
+        <SectionTitle sectionHeading="Latest News"></SectionTitle>
+        <LatestNews></LatestNews>
+      </Container>
+      <Subscription> </Subscription>
+      <Container>
+
         <div>
+          <SectionTitle sectionHeading="Photo Gallary"></SectionTitle>
           <Slider />
         </div>
       </Container>

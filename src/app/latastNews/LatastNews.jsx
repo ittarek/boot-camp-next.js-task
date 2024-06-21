@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "./latastNews.css";
-import Image  from "next/image";
+import Image from "next/image";
 
 const LatestNews = () => {
   const [newsData, setNewsData] = useState([]);
@@ -52,7 +52,8 @@ const LatestNews = () => {
             width={500}
             height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
           />
         </article>
         <article className="article">
@@ -114,7 +115,8 @@ const LatestNews = () => {
             width={500}
             height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
           />
         </article>
         <article className="article">
@@ -127,7 +129,8 @@ const LatestNews = () => {
             width={500}
             height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
           />
         </article>
         <article className="article">
@@ -147,7 +150,8 @@ const LatestNews = () => {
             width={500}
             height={500}
             className="image"
-            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image"
+            src="https://images.unsplash.com/photo-1478940020726-e9e191651f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
           />
         </article>
         <article className="article">
@@ -170,4 +174,3 @@ const LatestNews = () => {
 };
 
 export default LatestNews;
-

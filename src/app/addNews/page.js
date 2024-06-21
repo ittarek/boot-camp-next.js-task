@@ -14,25 +14,38 @@ const {
   watch,
   formState: { errors },
 } = useForm();
-
-const onSubmit = data => {
-    // Handle any form-specific logic here if needed
-    // reset(); // If reset is a function to reset the form, uncomment this line
-
-    // Make the POST request
-    fetch("https://kanban-task-server-4330zbruj-ittarek.vercel.app/addNews", {
+ // https://kanban-task-server-oy623rsbn-ittarek.vercel.app/addNews  
+acknowledged
+: 
+true
+    // fetch("https://kanban-task-server-4330zbruj-ittarek.vercel.app/addNews", 
+const onSubmit = async (data) => {
+  try {
+    const response = await fetch("http://localhost:5000/addNews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
-    })
-      .then(res => res.json())
-      .then(result => {
-        console.log(result);
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  };
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+     const result = await response.json();
+  if (result.acknowledged) {
+      alert("Thank You for adding news");
+    } else {
+      console.error("Error: No modification made to the news");
+    }
+
+   
+    console.log(result);
+  } catch (error) {
+    console.error("Error:", error.message);
+    // Handle the error, e.g., set an error state, display an error message, etc.
+  }
+};
+
 
  
 return (

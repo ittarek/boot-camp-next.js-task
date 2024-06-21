@@ -56,9 +56,9 @@ const handleLogout = () =>{
  const navData = user?.email ?   afterLoginNavData : beforeLoginNavData;
 
   return (
-    <section>
-      {" "}
-      <AppBar className=" bg-black">
+ 
+   
+   <section  className="">   <AppBar sx={{ bgcolor: "black" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <NewspaperIcon
@@ -140,7 +140,7 @@ const handleLogout = () =>{
                 </MenuItem>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          
             <Typography
               variant="h5"
               noWrap
@@ -157,7 +157,7 @@ const handleLogout = () =>{
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Pro News
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {/* <Button
@@ -227,8 +227,9 @@ const handleLogout = () =>{
             </Box>
           </Toolbar>
         </Container>
-      </AppBar>
-    </section>
+      </AppBar></section>
+
+    
   );
 };
 export default NavBar;

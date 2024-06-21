@@ -22,27 +22,33 @@ const ContinueNews = () => {
     };
   }, []);
   return (
-    <div className={`News-footer mt-[60px]  ${isSticky ? "sticky-top" : ""}`}>
-      <div className="news">
-        <span id="news-head">
-          <b>News</b>
-        </span>
+    <section className="">
+      {" "}
+      <div
+        className={`News-footer mt-[60px]   ${isSticky ? "sticky-top" : ""}`}
+      >
+        <div className="news ">
+          <span id="news-head">
+            {/* // eslint-disable-next-line react/jsx-no-comment-textnodes */}
+            <b> // BREAKING //</b>
+          </span>
+        </div>
+        <p className="N-text">
+          <marquee direction="left">
+            Manchester United conceded two own goals and lost Lisandro sdsds
+            <span>•US defence secretary launches intelligence review</span>
+            <span>
+              • Sadio Mane: Bayern Munich suspend forward after claims he
+              punched Leroy Sane
+            </span>
+            <span>
+              • Constantine Hatzidakis: No further action against assistant
+              referee for Andy Robertson incident
+            </span>
+          </marquee>
+        </p>
       </div>
-      <p className="N-text">
-        <marquee direction="left">
-          Manchester United conceded two own goals and lost Lisandro sdsds
-          <span>•US defence secretary launches intelligence review</span>
-          <span>
-            • Sadio Mane: Bayern Munich suspend forward after claims he punched
-            Leroy Sane
-          </span>
-          <span>
-            • Constantine Hatzidakis: No further action against assistant
-            referee for Andy Robertson incident
-          </span>
-        </marquee>
-      </p>
-    </div>
+    </section>
   );
 };
 
