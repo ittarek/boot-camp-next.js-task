@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect } from "react";
 import Swiper, { Navigation, Pagination } from "swiper";
-// import "./AllSlideStyle.css";
+
 const SideSlide2 = () => {
   useEffect(() => {
     new Swiper(".mySwiper2", {

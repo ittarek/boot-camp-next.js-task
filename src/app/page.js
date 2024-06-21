@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import Image from "next/image";
 import Container from "./components/Container";
 import LeftSide from "./components/topStories/LeftSide";
@@ -16,11 +15,7 @@ import EditorChioce from "./components/editorChoice/EditorChioce";
 import MeddleEeastNews from "./components/MiddelEeastnews/MeddleEeastNews";
 import TechStart from "./components/Teach&Startup/TechStart";
 import Subscription from "./components/Subscription/Subscription";
-// import SlideNews from "./components/SlideNews/SlideNews";
 
-// import LatestNews from './path-to-LatestNews-component/LatestNews';
-
-// import LatestNews from "./latastNews/LatastNews";
 export default function Home() {
   return (
     <main>

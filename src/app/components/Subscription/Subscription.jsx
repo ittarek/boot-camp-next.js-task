@@ -1,24 +1,8 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 import "./subscription.css";""
 import Container from "../Container";
 const Subscription = () => {
-  useEffect(() => {
-    (function () {
-      window.mc4wp = window.mc4wp || {
-        listeners: [],
-        forms: {
-          on: function (evt, cb) {
-            window.mc4wp.listeners.push({
-              event: evt,
-              callback: cb,
-            });
-          },
-        },
-      };
-    })();
-  }, []);
+ 
 
   return (
     <Container>
@@ -44,13 +28,13 @@ const Subscription = () => {
           </div>
           <div className="newsletter-form">
             <form
-              id="mc4wp-form-1"
-              className="mc4wp-form mc4wp-form-1713"
+           
+           
               method="post"
               data-id="1713"
               data-name="Form"
             >
-              <div className="mc4wp-form-fields">
+              <div className="">
                 <div>
                   <input
                     type="email"
@@ -77,7 +61,7 @@ const Subscription = () => {
                 Leave this field empty if you're human:{" "}
                 <input
                   type="text"
-                  name="_mc4wp_honeypot"
+                  name="title"
                   value=""
                   tabIndex="-1"
                   autoComplete="off"
@@ -87,8 +71,8 @@ const Subscription = () => {
               <input type="hidden" name="_mc4wp_form_id" value="1713" />
               <input
                 type="hidden"
-                name="_mc4wp_form_element_id"
-                value="mc4wp-form-1"
+                name="email"
+                value="it"
               />
               <div className="mc4wp-response"></div>
             </form>

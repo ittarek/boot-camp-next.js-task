@@ -16,7 +16,7 @@ const ContinueNews = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -29,8 +29,9 @@ const ContinueNews = () => {
       >
         <div className="news ">
           <span id="news-head">
-            {/* // eslint-disable-next-line react/jsx-no-comment-textnodes */}
-            <b> // BREAKING //</b>
+  
+
+            <b>  BREAKING </b>
           </span>
         </div>
         <p className="N-text">

@@ -13,7 +13,7 @@ const TechStart = () => {
       .then(res => res.json())
       .then(data => {
         setTopData(data);
-        // console.log(data);
+       
       });
   }, []);
   return (
