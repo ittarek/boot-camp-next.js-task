@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import "./SlideNews.css";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa"; // Import FontAwesome icons
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa"; 
 import Container from "../Container";
 
 const SlideShow = () => {
@@ -18,7 +18,7 @@ const SlideShow = () => {
 
   return (
   <Container>  
-    <div className="container mt-11 w-full mx-auto hidden">
+    <div className="container my-24 hidden w-full mx-auto ">
       <div id="slide" ref={slideRef}>
         <div
           className="items"
