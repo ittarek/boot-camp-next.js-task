@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
+// import "swiper/swiper-bundle.min.css";
 
 const MainSlide = () => {
   //  useEffect(() => {
