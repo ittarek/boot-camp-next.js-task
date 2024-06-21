@@ -1,6 +1,7 @@
 import React from "react";
 import "./subscription.css";""
 import Container from "../Container";
+import Image from "next/image";
 const Subscription = () => {
  
 
@@ -9,13 +10,14 @@ const Subscription = () => {
       <div className="newsletter-box newsletter-style is-box-none newsletter-box-1">
         <div className="newsletter-inner">
           <div className="newsletter-featured">
-            <img
-              decoding="async"
-              loading="lazy"
+            <Image
+            width={100}
+            height={0}
+              className="w-[300px]"
               src="https://images.unsplash.com/photo-1585282263861-f55e341878f8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="newsletter featured"
-              width="300"
-              height="285"
+    
+            
             />
           </div>
           <div className="newsletter-content">
@@ -30,9 +32,7 @@ const Subscription = () => {
             <form
            
            
-              method="post"
-              data-id="1713"
-              data-name="Form"
+         
             >
               <div className="">
                 <div>
@@ -58,7 +58,7 @@ const Subscription = () => {
                 </div>
               </div>
               <label style={{ display: "none" }}>
-                Leave this field empty if you're human:{" "}
+                Leave this field empty if you,re human:{" "}
                 <input
                   type="text"
                   name="title"
